@@ -152,8 +152,8 @@ public class FormCompanyActivity extends AppCompatActivity {
             return false;
         }
 
-        if (edtPhone.getText().toString().trim().length() < 8) {
-            edtPhone.setError("phone invalid");
+        if (!edtPhone.getText().toString().trim().matches("\\d{8}")) {
+            edtPhone.setError("phone should be 8 numbers");
             edtPhone.requestFocus();
             return false;
         }
@@ -161,20 +161,20 @@ public class FormCompanyActivity extends AppCompatActivity {
         String website = edtWebsite.getText().toString().trim();
 
         // 1. Champ obligatoire
-                if (website.isEmpty()) {
-                    edtWebsite.setError("Website required");
-                    edtWebsite.requestFocus();
-                    return false;
-                }
+        if (website.isEmpty()) {
+            edtWebsite.setError("Website required");
+            edtWebsite.requestFocus();
+            return false;
+        }
 
         // 2. Format obligatoire : http://www.nom_site...
-                String urlPattern = "^http://www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}.*$";
+        String urlPattern = "^http://www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}.*$";
 
-                if (!website.matches(urlPattern)) {
-                    edtWebsite.setError("Format invalid (ex: http://www.monsite.com)");
-                    edtWebsite.requestFocus();
-                    return false;
-                }
+        if (!website.matches(urlPattern)) {
+            edtWebsite.setError("Format invalid (ex: http://www.monsite.com)");
+            edtWebsite.requestFocus();
+            return false;
+        }
 
 
         if (spinnerLocation.getSelectedItem().toString().isEmpty()) {

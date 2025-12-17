@@ -40,6 +40,9 @@ public class BaseActivity extends AppCompatActivity {
         );
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        toggle.getDrawerArrowDrawable().setColor(
+                getResources().getColor(android.R.color.white)
+        );
 
         // gestion du menu
         navigationView.setNavigationItemSelectedListener(item -> {

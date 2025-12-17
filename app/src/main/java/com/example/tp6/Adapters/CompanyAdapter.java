@@ -174,6 +174,10 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.CompanyV
         linearLayout = itemView.findViewById(R.id.linearLayout);
     }
 }
+    public Company getCompanyAt(int position) {
+        return companyList.get(position);
+    }
+
     public void updateCompanies(List<Company> newList) {
         fullList.clear();
         fullList.addAll(newList);

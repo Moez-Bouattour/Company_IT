@@ -18,14 +18,17 @@
                 android:orientation="vertical">
 
                 <!-- Card : USERS -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardUsers"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginBottom="16dp"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="8dp"
-                    android:foreground="?attr/selectableItemBackground">
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardUsers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#DDDDDD"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -70,16 +73,20 @@
                     </LinearLayout>
 
 
-                </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
                 <!-- Card : COMPANIES -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardCompanies"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="8dp"
-                    android:foreground="?attr/selectableItemBackground">
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardCompanies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#DDDDDD"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -125,17 +132,20 @@
 
 
 
-                </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
                 <!-- Card : COMPANIES -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardRequests"
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    card_view:cardCornerRadius="16dp"
-                    card_view:cardElevation="8dp"
-                    android:layout_marginTop="15dp"
-                    android:foreground="?attr/selectableItemBackground">
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardRequests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:strokeColor="#DDDDDD"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#FFFFFF">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -181,7 +191,7 @@
 
 
 
-                </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
             </LinearLayout>
 </ScrollView>

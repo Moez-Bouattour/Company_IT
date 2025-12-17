@@ -103,6 +103,14 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
+
+        if (!phone.matches("\\d{8}")) {
+            edtPhone.setError("phone should be 8 numbers");
+            edtPhone.requestFocus();
+            return ;
+        }
+
+
         if (!pass.equals(confirm)) {
             Toast.makeText(this, "The passwords do not match", Toast.LENGTH_SHORT).show();
             return;

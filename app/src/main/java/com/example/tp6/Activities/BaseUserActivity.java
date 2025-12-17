@@ -45,6 +45,9 @@ public class BaseUserActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        toggle.getDrawerArrowDrawable().setColor(
+                getResources().getColor(android.R.color.white)
+        );
         SharedPreferences prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
         long userId = prefs.getInt("userId", 1);
 

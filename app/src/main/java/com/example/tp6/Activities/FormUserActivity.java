@@ -221,11 +221,14 @@ import com.example.tp6.DatabaseHelper;
                 return false;
             }
 
-            if (edtPhone.getText().toString().trim().length() != 8) {
-                edtPhone.setError("Phone invalid");
+            String phone = edtPhone.getText().toString().trim();
+
+            if (!phone.matches("\\d{8}")) {
+                edtPhone.setError("phone should be 8 numbers");
                 edtPhone.requestFocus();
                 return false;
             }
+
 
             if (edtDate.getText().toString().trim().isEmpty()) {
                 edtDate.setError("Date required");

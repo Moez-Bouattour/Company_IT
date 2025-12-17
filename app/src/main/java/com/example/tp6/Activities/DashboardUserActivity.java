@@ -109,8 +109,11 @@ public class DashboardUserActivity extends BaseUserActivity {
         if(resultCode == RESULT_OK && data != null) {
             Uri uri = data.getData();
             String path = savePdfToInternalStorage(uri); // méthode pour sauvegarder localement
-            int companyId = requestCode - 101;
-            dbHelper.addRequest(userId, companies.get(companyId).getId(), path);
+            int position = requestCode - 101;
+
+            Company company = adapter.getCompanyAt(position);
+            dbHelper.addRequest(userId, company.getId(), path);
+
             Toast.makeText(this, "Request sent !", Toast.LENGTH_SHORT).show();
             loadCompanies();
         }
