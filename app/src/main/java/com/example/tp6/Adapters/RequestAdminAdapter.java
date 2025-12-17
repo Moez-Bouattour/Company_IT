@@ -77,7 +77,7 @@ public class RequestAdminAdapter extends RecyclerView.Adapter<RequestAdminAdapte
             try {
                 context.startActivity(intent);
             } catch (ActivityNotFoundException e) {
-                Toast.makeText(context, "Aucune application PDF installée", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "No application PDF installed", Toast.LENGTH_SHORT).show();
             }
         });
         switch (req.getStatus()) {

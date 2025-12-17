@@ -31,7 +31,7 @@ public class ManageCompaniesActivity extends BaseActivity {
         RecyclerView recycler;
         String role;
         int userId;
-        Spinner spinnerFilter;
+        Spinner spinnerFilter,spinnerFilterPlace;
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +46,10 @@ public class ManageCompaniesActivity extends BaseActivity {
             userId = prefs.getInt("userId",1);
 
             spinnerFilter = findViewById(R.id.spinnerAvailability);
+            spinnerFilterPlace = findViewById(R.id.spinnerLocation);
 
             spinnerFilter.setVisibility(View.GONE);
+            spinnerFilterPlace.setVisibility(View.GONE);
 
             recycler = findViewById(R.id.listCompanies);
             recycler.setLayoutManager(new LinearLayoutManager(this));

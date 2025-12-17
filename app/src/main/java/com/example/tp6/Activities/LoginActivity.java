@@ -43,17 +43,17 @@ public class LoginActivity extends AppCompatActivity {
         Cursor c = db.login(sEmail, sPass);
 
         if (sEmail.isEmpty() ) {
-            Snackbar.make(view, "Veuillez entrer un email", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, "Enter your Email", Snackbar.LENGTH_LONG).show();
             return;
         }
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(sEmail).matches()) {
-            Snackbar.make(view, "Email invalide ", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, "Email invalid ", Snackbar.LENGTH_LONG).show();
             return;
         }
 
         if (sPass.isEmpty() ) {
-            Snackbar.make(view, "Veuillez entrer un password", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, "Enter your password", Snackbar.LENGTH_LONG).show();
             return;
         }
 

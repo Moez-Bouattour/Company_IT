@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="12dp"
-            android:hint="Nom">
+            android:hint="Username">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtName"
@@ -72,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Téléphone">
+            android:hint="Phone">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtPhone"
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="Site Web">
+            android:hint="Website">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtWebsite"

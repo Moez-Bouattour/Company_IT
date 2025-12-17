@@ -122,7 +122,7 @@ public class FormCompanyActivity extends AppCompatActivity {
 
                 dbHelper.updateCompany(company);
 
-            Toast.makeText(this, "Entreprise enregistrée avec succès", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Company added successfully !", Toast.LENGTH_SHORT).show();
 
             startActivity(new Intent(FormCompanyActivity.this, ManageCompaniesActivity.class));
             finish();
@@ -135,25 +135,25 @@ public class FormCompanyActivity extends AppCompatActivity {
     private boolean validateFields() {
 
         if (edtName.getText().toString().trim().isEmpty()) {
-            edtName.setError("Nom obligatoire");
+            edtName.setError("Username required");
             edtName.requestFocus();
             return false;
         }
 
         if (edtServices.getText().toString().trim().isEmpty()) {
-            edtServices.setError("Services obligatoires");
+            edtServices.setError("Services required");
             edtServices.requestFocus();
             return false;
         }
 
         if (edtPhone.getText().toString().trim().isEmpty()) {
-            edtPhone.setError("Téléphone obligatoire");
+            edtPhone.setError("phone requires");
             edtPhone.requestFocus();
             return false;
         }
 
         if (edtPhone.getText().toString().trim().length() < 8) {
-            edtPhone.setError("Téléphone non valide");
+            edtPhone.setError("phone invalid");
             edtPhone.requestFocus();
             return false;
         }
@@ -162,7 +162,7 @@ public class FormCompanyActivity extends AppCompatActivity {
 
         // 1. Champ obligatoire
                 if (website.isEmpty()) {
-                    edtWebsite.setError("Site web obligatoire");
+                    edtWebsite.setError("Website required");
                     edtWebsite.requestFocus();
                     return false;
                 }
@@ -171,31 +171,31 @@ public class FormCompanyActivity extends AppCompatActivity {
                 String urlPattern = "^http://www\\.[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}.*$";
 
                 if (!website.matches(urlPattern)) {
-                    edtWebsite.setError("Format invalide (ex: http://www.monsite.com)");
+                    edtWebsite.setError("Format invalid (ex: http://www.monsite.com)");
                     edtWebsite.requestFocus();
                     return false;
                 }
 
 
         if (spinnerLocation.getSelectedItem().toString().isEmpty()) {
-            Toast.makeText(this,"Location obligatoire",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Location required",Toast.LENGTH_SHORT).show();
             return false;
         }
 
         if (edtEmail.getText().toString().trim().isEmpty()) {
-            edtEmail.setError("Email obligatoire");
+            edtEmail.setError("Email required");
             edtEmail.requestFocus();
             return false;
         }
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(edtEmail.getText().toString()).matches()) {
-            edtEmail.setError("Email non valide");
+            edtEmail.setError("Format invalid");
             edtEmail.requestFocus();
             return false;
         }
 
         if (selectedImagePath == null) {
-            Toast.makeText(this, "Veuillez choisir une image", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "you should to choose a picture", Toast.LENGTH_SHORT).show();
             return false;
         }
 
